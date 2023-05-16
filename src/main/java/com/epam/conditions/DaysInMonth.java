@@ -11,9 +11,9 @@ public class DaysInMonth {
                 System.out.println(30);
                 break;
             case 2:
-                if(year%4==0&year>1999){
+                if(year%4==0 && year>1999){
                     System.out.println(29);
-                }else if( (year%4==0&year<2000) | year%4!=0){
+                }else if( (year%4==0 && year<2000) || year%4!=0){
                     System.out.println(28);
                 }
                 break;
