@@ -55,10 +55,11 @@ public class ArrayTasks {
      * arr = [99, -7, 102], number = -7    ->   2 arr = [5, -3, -4],   number = 10    ->  -1
      */
     public int findIndexOfNumber(int[] arr, int number) {
-        int res = 0;
+        int res = -1;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == number) {
-                res = (i + 1);
+                res = i;
+                i= arr.length*2;
             } else {
                 res = -1;
             }
@@ -103,11 +104,11 @@ public class ArrayTasks {
             }
         }
         int[] resArr = new int[length];
+        int j = 0;
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < resArr.length; j++) {
-                if (arr[i] > 0) {
-                    resArr[j] = arr[i];
-                }
+            if (arr[i] > 0) {
+                resArr[j] = arr[i];
+                j++;
             }
         }
         return resArr;
@@ -156,11 +157,11 @@ public class ArrayTasks {
             }
         }
 
-        if(firstArr.length> secondArr.length){
-            int[][] newArr= new int[][]{secondArr, firstArr};
+        if (firstArr.length > secondArr.length) {
+            int[][] newArr = new int[][]{secondArr, firstArr};
             return newArr;
-        }else{
-            int[][] newArr= new int[][]{firstArr, secondArr};
+        } else {
+            int[][] newArr = new int[][]{firstArr, secondArr};
             return newArr;
         }
 
