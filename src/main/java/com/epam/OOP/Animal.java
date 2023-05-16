@@ -2,6 +2,19 @@ package com.epam.OOP;
 
 public class Animal {
     private String color;
+
+    public String getColor() {
+        return color;
+    }
+
+    public int getNumberOfPaws() {
+        return numberOfPaws;
+    }
+
+    public boolean isHasFur() {
+        return hasFur;
+    }
+
     private int numberOfPaws;
     private boolean hasFur;
 
@@ -20,6 +33,6 @@ public class Animal {
         if(this.numberOfPaws<2){
             moreThanOnePaw = "paw";
         }
-        return "This animal is mostly "+ this.color +"It has"+ numberOfPaws+" "+moreThanOnePaw+" and "+hasFurStr+" fur.";
+        return "This animal is mostly "+ this.color +". It has "+ numberOfPaws+" "+moreThanOnePaw+" and "+hasFurStr+" fur.";
     }
 }
